@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './App.css';
 import useMediaQuery from './hooks/useMediaQuery';
 import Navbar from "./scenes/Navbar";
 
