@@ -13,13 +13,13 @@ const Landing = ({ setSelectedPage }) => {
                     <img alt="ahmed-bashir" className="hover:filter hover:saturate-150 transition duration-500 z-10 w-full
                     max-w-[400px] md:max-w-[350px]"  src="../assets/profile-pic.png" />
                 </div>) : (
-                    <img alt="ahmed-bashir" className="hover:filter mt-5 hover:saturate-150 transition duration-500 z-10 w-full
+                    <img alt="ahmed-bashir" className="hover:filter mt-8 hover:saturate-150 transition duration-500 z-10 w-full
                     max-w-[250px] md:max-w-[350px]"  src="../assets/profile-pic.png" />
                 )}
                 
             </div>
             {/* Main Section */}
-            <div className="z-30 basis-2/5 mt-12 md:mt-32">
+            <div className="z-30 basis-2/5 mt-8 md:mt-32">
                     {/* Heading */}
                     <motion.div
                         initial="hidden"
@@ -31,7 +31,7 @@ const Landing = ({ setSelectedPage }) => {
                             visible:{opacity:1, x:0}
                         }}
                     >
-                        <p className="text-6xl font-playfair z-10 text-center md:text-state">
+                        <p className="text-6xl font-playfair z-10 text-center md:text-start">
                             Ahmed {""}
                             <span className="xs:relative xs:text-deep-blue xs:font-semibold z-20 
                             xs:before:content-brush before:absolute 
@@ -40,7 +40,7 @@ const Landing = ({ setSelectedPage }) => {
                             </span>
 
                         </p>
-                        <p className="mt-10 mb-7 text-sm text-center md:text-start">
+                        <p className="mt-1 sm:mt-10 mb-7 text-sm text-center md:text-start">
 Transforming ideas into reality with cutting-edge engineering
                         </p>
                     </motion.div>
