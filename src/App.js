@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react';
 import useMediaQuery from './hooks/useMediaQuery';
+
 import Navbar from "./scenes/Navbar";
 import DotGroup from "./scenes/DotGroup";
 import Landing from "./scenes/Landing";
+import MySkills from "./scenes/MySkills";
+
 import LineGradient from "./components/LineGradient";
+
 function App() {
   const [selectedPage, setSelectedPage] = useState('home');
   const [isTopOfPage, setIsTopOfPage] = useState(true);
@@ -37,7 +41,7 @@ function App() {
     <LineGradient />
 
     <div className='w-5/6 mx-auto md:h-full'>
-      
+      <MySkills />
     </div>
     </div>
   );
