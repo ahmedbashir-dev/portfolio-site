@@ -18,8 +18,6 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 	);
 };
 
-const menuItems = ["Home", "Skills", "Projects", "Testimonials", "Contact"];
-
 const Navbar = ({isTopOfPage, selectedPage, setSelectedPage }) => {
 	//Represents when we are on mobile screen
 	const [isMenuToggled, setIsMenuToggled] = useState(false);
