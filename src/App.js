@@ -11,6 +11,7 @@ import LineGradient from "./components/LineGradient";
 function App() {
   const [selectedPage, setSelectedPage] = useState('home');
   const [isTopOfPage, setIsTopOfPage] = useState(true);
+  const [language, setLanguage] = useState('en');
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
 
@@ -41,7 +42,7 @@ function App() {
     <LineGradient />
 
     <div className='w-5/6 mx-auto md:h-full'>
-      <MySkills />
+      <MySkills language = {language}/>
     </div>
     </div>
   );
