@@ -6,6 +6,7 @@ export const strings = {
         I have taught programming and web development related courses to students at the GIFT University for the past 3 years, 
         where I have developed and led 6+ courses. My students consistently give me high ratings 
         for my ability to explain complex concepts in a clear and engaging manner. 
-        I am passionate about sharing my knowledge and helping others learn and grow.`
+        I am passionate about sharing my knowledge and helping others learn and grow.`,
+        "projects": "Creating value through problem-solving"
     }
 }
