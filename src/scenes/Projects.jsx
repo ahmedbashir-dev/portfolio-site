@@ -15,8 +15,9 @@ const projectVariant = {
   visible: {opacity:1, scale: 1},
 }
 
-const Project = ({title}) => {
-  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90`;
+const Project = ({title, subtext, src}) => {
+  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-grey z-30 
+  flex flex-col justify-center text-center items-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
   return(
     <motion.div
@@ -24,7 +25,11 @@ const Project = ({title}) => {
       className="relative"
     >
       <div className={overlayStyles}>
-
+        <p className="text-2xl font-playfair">{title}</p>
+        <p className="mt-7">
+          {subtext}
+        </p>
+        <img alt={projectTitle} src={src} />
       </div>
     </motion.div>
   )
