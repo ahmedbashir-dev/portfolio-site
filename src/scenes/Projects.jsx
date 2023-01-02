@@ -15,7 +15,7 @@ const projectVariant = {
   visible: {opacity:1, scale: 1},
 }
 
-const Project = ({title, subtext, src}) => {
+const Project = ({title, subtext, src, href}) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-grey z-30 
   flex flex-col justify-center text-center items-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
@@ -40,7 +40,7 @@ const Projects = ({ language }) => {
 	const _str = strings[language];
   
 	return (
-		<section id="projects">
+		<section id="projects" className="pt-96 pb-96">
 			{/* Headings */}
 			<motion.div
 				className="md:w-2/5 mx-auto text-center"
@@ -74,10 +74,11 @@ const Projects = ({ language }) => {
 					variants={container}
 				>
           {/* Row 1 */}
-          <div className="flex justify-center text-center items-center p-10 bg-red max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
+          <div className="flex justify-center text-center items-center p-10 bg-red
+              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
             BEAUTIFUL USER INTERFACES
           </div>
-          <Project title="Project 1"/>
+          <Project title="Project 1" subtext={""}/>
         </motion.div>
 			</div>
 		</section>
