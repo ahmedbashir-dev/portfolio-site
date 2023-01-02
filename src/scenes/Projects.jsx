@@ -16,13 +16,16 @@ const projectVariant = {
 }
 
 const Project = ({title}) => {
+  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
   return(
     <motion.div
       variants={projectVariant}
       className="relative"
     >
-      
+      <div className={overlayStyles}>
+
+      </div>
     </motion.div>
   )
 }
