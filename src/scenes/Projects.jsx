@@ -3,9 +3,34 @@ import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { strings } from "../res/strings";
 
+const container = {
+  hidden: {},
+  visible:{
+    transition:{ staggerChildren: 0.2}
+  }
+}
+
+const projectVariant = {
+  hidden: {opacity:0, scale: 0.8},
+  visible: {opacity:1, scale: 1},
+}
+
+const Project = ({title}) => {
+  const projectTitle = title.split(" ").join("-").toLowerCase();
+  return(
+    <motion.div
+      variants={projectVariant}
+      className="relative"
+    >
+      
+    </motion.div>
+  )
+}
+
 const Projects = ({ language }) => {
 	const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
 	const _str = strings[language];
+  
 	return (
 		<section id="projects">
 			{/* Headings */}
@@ -38,12 +63,14 @@ const Projects = ({ language }) => {
 					initial="hidden"
 					whileInView="visible"
 					viewport={{ once: true, amount: 0.5 }}
-					transition={{ duration: 0.5 }}
-					variants={{
-						hidden: { opacity: 0, y: -50 },
-						visible: { opacity: 1, y: 0 },
-					}}
-				></motion.div>
+					variants={container}
+				>
+          {/* Row 1 */}
+          <div className="flex justify-center text-center items-center p-10 bg-red max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
+            BEAUTIFUL USER INTERFACES
+          </div>
+          <Project title="Project 1"/>
+        </motion.div>
 			</div>
 		</section>
 	);
