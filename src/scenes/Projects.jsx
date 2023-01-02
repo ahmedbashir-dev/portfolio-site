@@ -5,17 +5,19 @@ import { strings } from "../res/strings";
 
 const container = {
   hidden: {},
-  visible:{
-    transition:{ staggerChildren: 0.2}
-  }
-}
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
 
 const projectVariant = {
-  hidden: {opacity:0, scale: 0.8},
-  visible: {opacity:1, scale: 1},
-}
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1 },
+};
 
-const Project = ({title, subtext, src, href}) => {
+const Project = ({title, subtext,  href}) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500 bg-grey z-30 
   flex flex-col justify-center text-center items-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
@@ -29,7 +31,7 @@ const Project = ({title, subtext, src, href}) => {
         <p className="mt-7">
           {subtext}
         </p>
-        <img alt={projectTitle} src={src} />
+        <img alt={projectTitle} src={`../assets/${projectTitle}.jpeg`} />
       </div>
     </motion.div>
   )
@@ -74,11 +76,13 @@ const Projects = ({ language }) => {
 					variants={container}
 				>
           {/* Row 1 */}
-          <div className="flex justify-center text-center items-center p-10 bg-red
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
+          <div
+            className="flex justify-center text-center items-center p-36 bg-red
+              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+          >
             BEAUTIFUL USER INTERFACES
           </div>
-          <Project title="Project 1" subtext={""}/>
+          <Project title="Project 1" subtext={"text"} />
         </motion.div>
 			</div>
 		</section>
