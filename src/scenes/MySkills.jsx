@@ -7,7 +7,7 @@ const MySkills = ({language}) => {
 	const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
     const _str = strings[language];
 	return (
-		<section id="skills" className="pt-10 pb-24">
+		<section id="projects" className="pt-10 pb-24">
 			{/* Header and Image section */}
 			<div className="md:flex md:justify-between md:gap-16 mt-32">
 				<motion.div

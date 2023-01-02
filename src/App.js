@@ -7,7 +7,7 @@ import Navbar from "./scenes/Navbar";
 import DotGroup from "./scenes/DotGroup";
 import Landing from "./scenes/Landing";
 import MySkills from "./scenes/MySkills";
-import Projects from "./scenes/MySkills";
+import Projects from "./scenes/Projects";
 
 import LineGradient from "./components/LineGradient";
 
