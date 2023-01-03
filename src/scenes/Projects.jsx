@@ -37,7 +37,7 @@ const Project = ({ title }) => {
 };
 
 const Projects = ({ language }) => {
-	const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
+	
 	const _str = strings[language];
   
 	return (
